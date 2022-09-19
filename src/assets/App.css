@@ -1,0 +1,10 @@
+body{
+    margin: 10% !important;
+}
+
+.todo-title{
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: 5px;
+    margin-bottom: 20px !important;
+}
