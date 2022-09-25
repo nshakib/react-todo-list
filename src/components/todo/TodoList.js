@@ -5,6 +5,7 @@ import {faEdit,faTrash} from '@fortawesome/free-solid-svg-icons'
 import TodoCreate from './TodoCreate'
 import TodoEmpty from './TodoEmpty';
 import TodoEdit from './TodoEdit';
+import { v4 as uuidv4 } from 'uuid';
 
 const TodoList = () => {
     const [todoEditing, setTodoEditing] = useState(null);
@@ -53,7 +54,7 @@ const TodoList = () => {
                 <ListGroup>
                     {
                         todos.map((todo, index) =>(
-                            <ListGroup.Item key={index} variant={todo.status === 'Pending' ? 'info' : 'warning'}>
+                            <ListGroup.Item key={uuidv4()} variant={todo.status === 'Pending' ? 'info' : 'warning'}>
                                 <div className='float-start'>
                                     {
                                         todoEditing === index ? 
